@@ -1,0 +1,13 @@
+SERVER CONFIGURATION
+
+IP Address : 192.168.2.2
+Subnet Mask: 255.255.255.0
+Gateway    : 192.168.2.1
+DNS        : 192.168.2.2
+
+Enabled Services:
+- DNS
+- HTTP
+- FTP
+- SMTP
+- POP3

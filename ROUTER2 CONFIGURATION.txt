@@ -1,0 +1,15 @@
+ROUTER2 CONFIGURATION
+
+enable
+configure terminal
+
+interface gig0/0
+ ip address 192.168.4.2 255.255.255.0
+ no shutdown
+ exit
+
+! Default route to Router0
+ip route 0.0.0.0 0.0.0.0 192.168.4.1
+
+end
+write memory

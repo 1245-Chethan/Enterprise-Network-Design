@@ -1,0 +1,43 @@
+L3 SWITCH CONFIGURATION
+
+enable
+configure terminal
+
+! Enable routing
+ip routing
+
+! Create VLANs
+vlan 10
+ name PC_VLAN
+vlan 20
+ name SERVER_VLAN
+
+! VLAN interfaces (SVI)
+interface vlan 10
+ ip address 192.168.3.1 255.255.255.0
+ no shutdown
+ exit
+
+interface vlan 20
+ ip address 192.168.2.1 255.255.255.0
+ no shutdown
+ exit
+
+! Trunk to L2 Switch
+interface gig0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+ exit
+
+! Routed port to Router0
+interface gig0/2
+ no switchport
+ ip address 10.0.0.1 255.255.255.252
+ no shutdown
+ exit
+
+! Static route to Laptop network
+ip route 192.168.4.0 255.255.255.0 10.0.0.2
+
+end
+write memory

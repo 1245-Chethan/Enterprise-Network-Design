@@ -1,0 +1,31 @@
+L2 SWITCH CONFIGURATION
+
+enable
+configure terminal
+
+! Create VLANs
+vlan 10
+ name PC_VLAN
+vlan 20
+ name SERVER_VLAN
+
+! Assign PC ports to VLAN 10
+interface range fa0/1 - 10
+ switchport mode access
+ switchport access vlan 10
+ exit
+
+! Assign Server port to VLAN 20
+interface fa0/11
+ switchport mode access
+ switchport access vlan 20
+ exit
+
+! Trunk port to L3 Switch
+interface fa0/24
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+ exit
+
+end
+write memory

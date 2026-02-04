@@ -1,0 +1,21 @@
+ROUTER0 CONFIGURATION
+
+enable
+configure terminal
+
+interface gig0/0
+ ip address 10.0.0.2 255.255.255.252
+ no shutdown
+ exit
+
+interface gig0/1
+ ip address 192.168.4.1 255.255.255.0
+ no shutdown
+ exit
+
+! Routes to VLAN networks
+ip route 192.168.3.0 255.255.255.0 10.0.0.1
+ip route 192.168.2.0 255.255.255.0 10.0.0.1
+
+end
+write memory
