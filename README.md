@@ -1,5 +1,14 @@
 # Enterprise-Network-Design using cisco Packet Tracer
 
+##  How to Run This Project
+1. Open Cisco Packet Tracer
+2. Load the `.pkt` file
+3. Power on all devices
+4. Verify IP configuration
+5. Test connectivity using ping
+6. Access HTTP, FTP, and Email services
+
+
 ##  Project Overview
 This project demonstrates an enterprise-level network designed using Cisco Packet Tracer.  
 It includes VLAN segmentation, inter-VLAN routing, router-to-router communication, and server-based services.
