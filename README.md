@@ -20,13 +20,13 @@ It includes VLAN segmentation, inter-VLAN routing, router-to-router communicatio
 - Server
 - PCs and Laptop
 
-## 🌐 Server Services Implemented
+##  Server Services Implemented
 - **DNS** – Domain name resolution
 - **HTTP** – Web server
 - **FTP** – File transfer
 - **Email (SMTP & POP3)** – Mail communication
 
-## 🧪 Testing & Verification
+##  Testing & Verification
 - Successful ping between PC, Server, Routers, and Laptop
 - Webpage accessed using DNS name
 - FTP file upload/download tested
